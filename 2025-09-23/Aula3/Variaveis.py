@@ -4,4 +4,6 @@ ano_nascimento=1986
 
 idade=ano_atual-ano_nascimento
 
-print(idade)
+#print(idade)
+
+print('Você tem ',idade, 'anos.')
