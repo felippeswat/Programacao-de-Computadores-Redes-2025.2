@@ -14,5 +14,5 @@ print(f'Média: {media}')
 
 if (media>=60):
     print('APROVADO')
-else
+else:
     print(' REPROVADO')
