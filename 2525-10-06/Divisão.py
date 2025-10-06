@@ -1,8 +1,8 @@
 from io import RawIOBase
 import sys
 
-Dividendo        =float(input('Informe o Dividendo: '))
-Divisor          =float(input('Informe o divisor: '))
+Dividendo        =int(input('Informe o Dividendo: '))
+Divisor          =int(input('Informe o divisor: '))
 
 try:
     resultado       = Dividendo/Divisor
