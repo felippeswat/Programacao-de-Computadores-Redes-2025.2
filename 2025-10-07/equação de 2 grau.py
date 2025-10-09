@@ -49,3 +49,7 @@ elif (delta == 0):
     x       = -b/(2*a)
 
     print(f'A equação possui 1 raiz X={x:.2f}')
+
+else:
+	
+	print('A equação não possui raizes reais')
