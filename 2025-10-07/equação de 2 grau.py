@@ -26,6 +26,10 @@ import sys
 print('Vamos calcular o valor das raizes da equação de 2º grau')
 
 a       =int(input('Informe o valor de "a" na equação: '))
+
+if (a == 0):
+    sys.exit('Valor de "a" é zero, com isso a equção não é de 2º grau!')
+
 b       =int(input('Informe o valor de "b" na equação: '))
 c       =int(input('Informe o valor de "c" na equação: '))
 
@@ -33,8 +37,7 @@ c       =int(input('Informe o valor de "c" na equação: '))
 #print(f'b: {b}')
 #print(f'c: {c}')
 
-if (a == 0):
-    sys.exit('Valor de "a" é zero, com isso a equção não é de 2º grau!')
+
 delta     =(b**2)-4*a*c
 
 print(f'O valor de Delta é: {delta}')
