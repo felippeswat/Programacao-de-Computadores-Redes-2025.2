@@ -25,7 +25,17 @@ try:
 # Tratamento de erro para valores não numéricos
 except ValueError:
    
-   sys.exit('ERRO: Você deve digitar um valor numérico e inteiro.')
+   sys.exit('ERRO: Você deve digitar um valor numérico.')
+
+# Tratamento de erro para outros tipos de erro
+except Exception as strErro:
+   sys.exit(f'ERRO: {strErro}')
+ 
+else:
+
+# Verifica se o ano e um valor negativo 
+   if ano < 0:
+      sys.exit('ERRO: O ano deve ser um valor numerico, inteiro e positivo.')
 
 #Verificando se o ano é bissexto
 if ano % 100 == 0:
