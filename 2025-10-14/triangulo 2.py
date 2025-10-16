@@ -101,7 +101,7 @@ else:
   elif (fltAnguloA > 90) or (fltAnguloB > 90) or (fltAnguloC > 90):
     strClassificacaoAngulos = 'Obtusângulo'
   else:
-    strClassificacaoAngulos = 'A'
+    strClassificacaoAngulos = 'Acutângulo'
 
  # ----------------------------------------------------------------------
   # Exibindo os resultados
