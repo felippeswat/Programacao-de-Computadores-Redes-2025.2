@@ -29,6 +29,6 @@ else:
 
 # Usando for com range(intNumero, 1, -1).
     for intauxiliar in range(intNumero, 1, -1):
-        intFatorial *= i
+        intFatorial *= intauxiliar
 
     print(f'{intNumero}! = {intFatorial}')
