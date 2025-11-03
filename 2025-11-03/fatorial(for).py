@@ -27,7 +27,7 @@ else:
 
     intFatorial = 1
 
-# Usando for com range(intNumero, 1, -1)
+# Usando for com range(intNumero, 1, -1).
     for i in range(intNumero, 1, -1):
         intFatorial *= i
 
