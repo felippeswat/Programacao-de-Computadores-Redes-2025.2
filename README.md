@@ -4,6 +4,6 @@ Repositório de códigos desenvolvidos nas aulas da disciplina de programação 
 
 #dontpad.com/20252-ProgComp
 
-#git config--global user.name "felippeswat"
+#git config --global user.name "felippeswat"
 
-#git config--global user.email "felippe_fab@hotmail.com"
+#git config --global user.email "felippe_fab@hotmail.com"
