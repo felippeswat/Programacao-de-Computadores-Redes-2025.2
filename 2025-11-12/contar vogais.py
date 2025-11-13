@@ -2,7 +2,7 @@
 
 strTexto        =       input('Digitem uma palavra')
 
-vogais      =       "aeiou"
+vogais      =       "aeiouàèìòùáéíóúâêîôûãõ"
 cont        =       0
 
 for palavra in strTexto.lower():
