@@ -9,8 +9,9 @@ while intValor != 0:
         intValor    =       int(input('Digite um valor: '))
     except ValueError:
         print('Digite um valor interio!')
-    except exception is e:
-        print (e)
+
+    except Exception is e:
+        print(e)
     
     else:
 
