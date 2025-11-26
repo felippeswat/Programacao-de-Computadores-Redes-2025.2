@@ -10,7 +10,7 @@ while intValor != 0:
     except ValueError:
         print('Digite um valor interio!')
 
-    except Exception is e:
+    except Exception as e:
         print(e)
     
     else:
@@ -21,4 +21,4 @@ while intValor != 0:
             if intValor not in lstValor:
                 lstValor.append(intValor)
 
-print(f'{lstValor}')
+print(f':{lstValor}')
