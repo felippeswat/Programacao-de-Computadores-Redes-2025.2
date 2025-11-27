@@ -13,13 +13,16 @@
    - A variância dos valores na lista
    - O desvio padrão dos valores na lista
 '''
+
 import random
 
 intQtValores = 20
 lstlista    =   list()
 i = 0
+mediana = 0
 
-while i < lstlista:
+while i < intQtValores:
+
     x = random.randint(1, 100)
     if x not in lstlista:
         lstlista.append(x)
@@ -36,8 +39,30 @@ intmaior = max(lstlista)
 #Função para encontrar o menor valor de uma lista
 intmenor = min(lstlista)
 
+#Mediana
+if len(lstlista) % 2 != 0:
+    mediana = lstlista[len(lstlista) // 2]
+
+else:
+    mediana = (lstlista[len(lstlista) // 2 - 1] + lstlista[len(lstlista) // 2]) / 2
+
+#Variância
+fltvariancia = 0
+
+for valor in lstlista:
+    fltvariancia += (valor - intmedia) ** 2
+
+fltvariancia /= len(lstlista)
+
+
+
 print('A lista é: ')
 print(lstlista)
 print('A soma dos valores é: ')
 print(intsoma)
-
+print('A média dos valores é: ')
+print(intmedia)
+print('A mediana é: ')
+print(mediana)
+print('A variância é: ')
+print(fltvariancia)
