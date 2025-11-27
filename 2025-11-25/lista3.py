@@ -54,7 +54,9 @@ for valor in lstlista:
 
 fltvariancia /= len(lstlista)
 
+#Desvio padrão
 
+desvio = (fltvariancia ** 0.5)
 
 print('A lista é: ')
 print(lstlista)
@@ -66,3 +68,5 @@ print('A mediana é: ')
 print(mediana)
 print('A variância é: ')
 print(fltvariancia)
+print('O desvio padrão é: ')
+print(desvio)
