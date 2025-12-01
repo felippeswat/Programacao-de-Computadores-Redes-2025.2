@@ -29,7 +29,9 @@ soma = 0
 media = 0
 lstmaior = 0
 aux = 0
+aux2 = lstValores[0]
 indice = 0
+indice2 = 0
 
 #calculando  a soma dos valores da lista
 
@@ -47,9 +49,9 @@ for lstmaior in lstValores:
 
 #encontrando o menor valor da lista
 for lstmenor in lstValores:
-   if lstmenor < aux:
-      aux = lstmaior
-      indice = lstValores.index(lstmaior)
+   if lstmenor < aux2:
+      aux2 = lstmenor
+      indice2 = lstValores.index(lstmenor)
 
 # Exibe a lista de valores informados pelo usuário
 print('Lista de valores informados:')
@@ -59,6 +61,7 @@ print(soma)
 print('Media dos valores:')
 print(media)
 print(f'Maior dos valores é: {aux} e  sua posição é a: {indice}')
+print(f'Menor dos valores é: {aux2} e  sua posição é a: {indice2}')
 
 # Exibir a soma dos valores na lista
 
