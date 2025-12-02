@@ -10,7 +10,7 @@ valor = 0
 
 # ------------------------------------------------------------
 # 1) Gerando a lista de valores únicos
-'''lstValores = list()
+lstValores = list()
 i = 0
 while i < intQtValores:
    intValor = random.randint(1, 100)
@@ -18,7 +18,7 @@ while i < intQtValores:
       lstValores.append(intValor)
       i += 1 
 print(f'Lista gerada.............: {lstValores}')
-'''
+
 #lstValores = [valor if valor not in lstValores for valores  ]
 
 # ------------------------------------------------------------
