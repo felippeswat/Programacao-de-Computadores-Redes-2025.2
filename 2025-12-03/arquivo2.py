@@ -1,3 +1,5 @@
+import os
+
 lstValores = list()
 
 for i in range(1, 21):
@@ -10,8 +12,10 @@ for i in range(1, 21):
 
     lstValores.append([i, x])
 
+strNomeDir = os.path.dirname(__file__)
 
-arqSaida = open('fatoriais2a.txt', 'a')
+strNomeArqivo = f'{strNomeDir}\\fatoriais3.txt'
+arqSaida = open(strNomeArqivo, 'w')
 
 for lista in lstValores:
 
