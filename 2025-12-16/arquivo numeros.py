@@ -70,8 +70,16 @@ intSoma         = sum(lstNumeros)
 fltMedia        = intSoma / len(lstNumeros)   
 
 # c) Contando quantos números são maiores que a média
+intMaioresMedia = 0
+for numero in lstNumeros:
+   if numero < fltMedia:
+      intMaioresMedia += 1
 
 # d) Contando quantos números são menores que a média
+intMenoresMedia = 0
+for numero in lstNumeros:
+   if numero < fltMedia:
+      intMenoresMedia += 1
 
 # e) Calculando a mediana dos números
 fltMediana      = statistics.median(lstNumeros)
@@ -88,11 +96,13 @@ try:
 except Exception as e:
     sys.exit(f'ERRO: {e}')    
 else:
-    arqResultados.write(f'Soma.........: {intSoma}\n')
-    arqResultados.write(f'Média........: {fltMedia}\n')
-    arqResultados.write(f'Mediana......: {fltMediana}\n')
-    arqResultados.write(f'Variância....: {fltVariancia}\n')
-    arqResultados.write(f'Desvio Padrão: {fltDesvioPadrao}\n')
+    arqResultados.write(f'Soma..................: {intSoma}\n')
+    arqResultados.write(f'Média.................: {fltMedia}\n')
+    arqResultados.write(f'Maiores que a média...: {intMaioresMedia}\n')
+    arqResultados.write(f'Menores que a média...: {intMenoresMedia}\n')
+    arqResultados.write(f'Mediana...............: {fltMediana}\n')
+    arqResultados.write(f'Variância.............: {fltVariancia}\n')
+    arqResultados.write(f'Desvio Padrão.........: {fltDesvioPadrao}\n')
 
 # Fechando o arquivo de resultados após a escrita
 arqResultados.close()
