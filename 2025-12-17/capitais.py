@@ -58,6 +58,7 @@ for linha in strLinha:
     listaGeral.append([strCapital, strUf, strRegiao, strPop])
 
 
-print(listaGeral[0])
+
+print(listaGeral)
 
 arquiLeitura.close()
