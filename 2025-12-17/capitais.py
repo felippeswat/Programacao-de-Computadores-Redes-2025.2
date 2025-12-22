@@ -42,23 +42,25 @@ else:
 
     while True:
 
-        strLinha = arquiLeitura.readline().strip()
+        strLinha = arquiLeitura.readline()
 
         if not strLinha: break
 
-        #print(strLinha)
+        print(strLinha)
 
 for linha in strLinha:
 
-    strCapital = linha[0]
-    strUf      = linha[1]
-    strRegiao  = linha[2]
-    strPop     = linha[3]
+    strCapital = linha[0].strip()
+    strUf      = linha[1].strip()
+    strRegiao  = linha[2].strip()
+    strPop     = linha[3].strip()
 
     listaGeral.append([strCapital, strUf, strRegiao, strPop])
 
-
-
-print(listaGeral)
+    print(strCapital)
+    print(strUf)
+    print(strRegiao)
+    print(strPop)
+    #print(listaGeral)
 
 arquiLeitura.close()
