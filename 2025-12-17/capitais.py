@@ -80,3 +80,37 @@ for capital in listaGeral:
     regioes_unicas.add(capital[2])
 
 print(f'\nRegiões encontradas com set():{regioes_unicas}')
+
+strRegioesOrd = ['N', 'NE', 'CO', 'S', 'SE']
+
+lstTotaisLista = []
+
+for regiao in strRegioesOrd:
+
+    lstCapitaisFilt = filter(lambda c: c[2] == regiao, listaGeral)
+
+    totalPopulacao = sum(c[3] for c in lstCapitaisFilt)
+
+    lstTotaisLista.append(totalPopulacao)
+
+print('\nTotal populacional por região: ')
+
+for i in range(len(strRegioesOrd)):
+    print(f'{strRegioesOrd[i]}: {lstTotaisLista[i]}')
+
+try:
+    
+    arquiSaida = open(f'{strDiretorio}/populacao_regioes.csv', 'w', encoding= 'utf-8')
+
+except Exception as e:
+    sys.exit(f'Erro: {e}')
+
+else:
+
+    arquiSaida.write('Região;População\n')
+    for i in range(len(strRegioesOrd)):
+        reg = strRegioesOrd[i]
+        total = lstTotaisLista[i]
+        arquiSaida.write(f'{reg};{total}\n')
+
+arquiSaida.close()
