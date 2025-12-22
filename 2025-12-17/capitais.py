@@ -24,3 +24,16 @@ import sys, os
 strDiretorio = os.path.dirname(__file__)
 
 strNomeArquivo = capitais_brasil.csv
+
+try:
+
+    arquiLeitura = open(f'{strDiretorio}/{strNomeArquivo}', 'r', encoding= 'utf-8')
+
+except FileNotFoundError:
+    sys.exit(f'Arquivo "{strNomeArquivo}" não encontrado')
+
+except Exception as e:
+    sys.exit(f'Erro: {e}')
+
+else:
+    
