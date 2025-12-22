@@ -24,7 +24,7 @@ import sys, os
 
 strDiretorio = os.path.dirname(__file__)
 
-strNomeArquivo = "capitais_brasil.csv"
+strNomeArquivo = 'capitais_brasil.csv'
 
 try:
 
@@ -46,4 +46,18 @@ else:
 
         if not strLinha: break
 
-        print(strLinha)
+        #print(strLinha)
+
+for linha in strLinha:
+
+    strCapital = linha[0]
+    strUf      = linha[1]
+    strRegiao  = linha[2]
+    strPop     = linha[3]
+
+    listaGeral.append([strCapital, strUf, strRegiao, strPop])
+
+
+print(listaGeral[0])
+
+arquiLeitura.close()
