@@ -1,11 +1,19 @@
-# Importar nada! Usamos só Python puro.
+
+import os
+
+strDiretorio = os.path.dirname(__file__)
+
+strNomeArquivo = 'capitais_brasil.csv'
 
 # Abrir o arquivo para leitura ('r' de read)
-with open('capitais_brasil.csv', 'r', encoding='utf-8') as arquivo:
+
+arquiLeitura = open(f'{strDiretorio}/{strNomeArquivo}', 'r', encoding='utf-8')
     # Ler todas as linhas de uma vez e guardar numa lista
-    linhas = arquivo.readlines()
+linhas = arquiLeitura.readlines()
 
 # Mostrar as primeiras linhas pra ver se leu certo (pra teste)
 print(linhas[:3])  # Mostra as 3 primeiras linhas
 
 print(len(linhas))
+
+arquiLeitura.close()

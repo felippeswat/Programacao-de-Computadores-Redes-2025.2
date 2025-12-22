@@ -24,7 +24,7 @@ import sys, os
 
 strDiretorio = os.path.dirname(__file__)
 
-strNomeArquivo = capitais_brasil.csv
+strNomeArquivo = "capitais_brasil.csv"
 
 try:
 
@@ -46,3 +46,4 @@ else:
 
         if not strLinha: break
 
+        print(strLinha)
