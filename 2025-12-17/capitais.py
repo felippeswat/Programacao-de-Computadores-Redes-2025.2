@@ -1,3 +1,4 @@
+
 '''Fazer um programa que leia o arquivo capitais_brasil.csv e
    preencha uma lista com sublistas contendo o nome da capital, 
    a sigla do seu estado, a sigla da sua região e a sua população.
@@ -30,10 +31,18 @@ try:
     arquiLeitura = open(f'{strDiretorio}/{strNomeArquivo}', 'r', encoding= 'utf-8')
 
 except FileNotFoundError:
-    sys.exit(f'Arquivo "{strNomeArquivo}" não encontrado')
+    sys.exit(f'Erro: Arquivo "{strNomeArquivo}" não encontrado')
 
 except Exception as e:
     sys.exit(f'Erro: {e}')
 
 else:
-    
+
+    listaGeral = list()
+
+    while True:
+
+        strLinha = arquiLeitura.readline().strip()
+
+        if not strLinha: break
+
