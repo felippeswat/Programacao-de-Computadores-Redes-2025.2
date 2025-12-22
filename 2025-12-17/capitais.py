@@ -42,25 +42,41 @@ else:
 
     while True:
 
-        strLinha = arquiLeitura.readline()
+        strLinha = arquiLeitura.readline().strip()
 
         if not strLinha: break
 
-        print(strLinha)
+        #print(strLinha)
 
-for linha in strLinha:
+        strDiv = strLinha.split(';')
 
-    strCapital = linha[0].strip()
-    strUf      = linha[1].strip()
-    strRegiao  = linha[2].strip()
-    strPop     = linha[3].strip()
+        #print(strDiv)
 
-    listaGeral.append([strCapital, strUf, strRegiao, strPop])
+        strCapital = strDiv[0].strip()
+        strUf      = strDiv[1].strip()
+        strRegiao  = strDiv[2].strip()
+        strPop     = strDiv[3].strip()
 
-    print(strCapital)
-    print(strUf)
-    print(strRegiao)
-    print(strPop)
-    #print(listaGeral)
+        intPop     = int(strPop)
+
+        listaGeral.append([strCapital, strUf, strRegiao, intPop])
+
+    #print(strCapital)
+    #print(strUf)
+    #print(strRegiao)
+    #print(strPop)
+        print(f'Adicionada: {strCapital} ({strUf} - {strRegiao}) pop: {intPop}')
 
 arquiLeitura.close()
+
+print('\nLeitura concluida!')
+print(f'Total de capitais lidas: {len(listaGeral)}')
+print('Primeiras 3:', listaGeral[:3])
+print('Ultimas 3:', listaGeral[-3:])
+
+regioes_unicas = set()
+
+for capital in listaGeral:
+    regioes_unicas.add(capital[2])
+
+print(f'\nRegiões encontradas com set():{regioes_unicas}')
