@@ -1,3 +1,9 @@
+'''Adicionando informações da lista: lstcenso2022 no dicionário: dictUFBR'''
+
+# Adicionar a cada dicionário de dictUFBR a chave 'população' e atribuir o seu valor correspondente 
+# usando como base a lista lstCenso2022 
+
+
 dictUFBR = {
     'AC': {'nome': 'Acre', 'capital': 'Rio Branco', 'região': 'Norte'},
     'AL': {'nome': 'Alagoas', 'capital': 'Maceió', 'região': 'Nordeste'},
@@ -35,5 +41,24 @@ lstCenso2022 = [	['AC', 830018], 	['AL', 3127683], 	['AP', 733508], 	['AM', 3941
 				['RS', 10880506], 	['RO', 1581016], 	['RR', 636303], 	['SC', 7609601], 	['SP', 44420459], 
 				['SE', 2209558], 	['TO', 1511459]	]
 
-# Adicionar a cada dicionário de dictUFBR a chave 'população' e atribuir o seu valor correspondente 
-# usando como base a lista lstCenso2022 
+
+for sigla, populacao in lstCenso2022:
+
+    if sigla in dictUFBR:
+
+        dictUFBR[sigla]['populacao'] = populacao
+
+        print(f'População adicionada para {sigla}: {populacao} habitantes')
+
+    else:
+
+        print(f'Atenção: sigla {sigla} não encontrada no Dicionário UF BR')
+
+#for i in dictUFBR:
+
+ #   print(f'novo dicionario {[i]}\n')
+
+
+
+'''for sigla, populacao in populacao_2025:
+    estados.get(sigla, {})["populacao"] = populacao  #.get() evita KeyError, mas cria {} se não existir (cuidado!)'''
