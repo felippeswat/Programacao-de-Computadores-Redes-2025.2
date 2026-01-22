@@ -54,9 +54,8 @@ for sigla, populacao in lstCenso2022:
 
         print(f'Atenção: sigla {sigla} não encontrada no Dicionário UF BR')
 
-#for i in dictUFBR:
 
- #   print(f'novo dicionario {[i]}\n')
+print(dictUFBR)
 
 
 
