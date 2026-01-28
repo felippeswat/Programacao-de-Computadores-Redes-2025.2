@@ -13,7 +13,7 @@ except FileNotFoundError:
     sys.exit('Erro: Arquivo não encontrado!')
 
 except Exception as e:
-    sys.exit(f'Erro ao abrir aqrquivo: {e}')
+    sys.exit(f'Erro ao abrir arquivo: {e}')
 
 else:
 
